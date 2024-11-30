@@ -25,4 +25,9 @@ describe('isValidSudokuNumber utility method', () => {
     const isValid = isValidSudokuNumber(0)
     expect(isValid).toBe(false)
   })
+
+  test('should evaluate false if number is not an integer', () => {
+    const isValid = isValidSudokuNumber(1.5)
+    expect(isValid).toBe(false)
+  })
 })

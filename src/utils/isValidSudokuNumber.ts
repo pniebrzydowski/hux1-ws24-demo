@@ -1,4 +1,4 @@
-export const isValidSudokuNumber = (num: number): boolean => {
-  if (num >= 1 && num <= 9) return true
-  return false
+export const isValidSudokuNumber = (value: number): boolean => {
+  if (!Number.isInteger(value)) return false
+  return value >= 1 && value <= 9
 }
