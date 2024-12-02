@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
-import HelloWorld from './HelloWorld.vue'
+import App from '@/App.vue'
 
 test('should render the appropriate heading', () => {
-  const wrapper = mount(HelloWorld)
+  const wrapper = mount(App)
   expect(wrapper.get('h1').text()).toEqual('Sudoku')
 })
