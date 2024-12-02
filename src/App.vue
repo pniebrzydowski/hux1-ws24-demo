@@ -1,16 +1,11 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import GameBoard from './components/GameBoard.vue'
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
   <main>
-    <p>welcome</p>
+    <h1>Sudoku</h1>
+    <GameBoard />
   </main>
 </template>
 
