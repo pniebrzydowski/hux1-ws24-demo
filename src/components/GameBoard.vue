@@ -1,8 +1,12 @@
 <script setup lang="ts">
 import SudokuBlock from './SudokuBlock.vue'
+const { gameId } = defineProps<{
+  gameId: number
+}>()
 </script>
 
 <template>
+  <h2>Game Id: {{ gameId }}</h2>
   <div class="board">
     <SudokuBlock v-for="n in 9" :key="n" />
   </div>
