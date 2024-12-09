@@ -1,15 +1,8 @@
-<script setup lang="ts">
-import GameBoard from './components/GameBoard.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="wrapper">
-    <header>
-      <h1>Sudoku</h1>
-    </header>
-    <main>
-      <GameBoard />
-    </main>
+    <router-view></router-view>
   </div>
 </template>
 
