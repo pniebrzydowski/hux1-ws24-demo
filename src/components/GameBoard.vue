@@ -1,10 +1,18 @@
 <script setup lang="ts">
+import { transformArray } from '@/utils/transformArray'
 import SudokuBlock from './SudokuBlock.vue'
+import { useGameStore } from '@/store/game'
+
+const gameStore = useGameStore()
+const url = 'https://sugoku.onrender.com/board?difficulty=easy'
+const res = await fetch(url)
+const data = await res.json()
+gameStore.board = transformArray(data.board)
 </script>
 
 <template>
   <div class="board">
-    <SudokuBlock v-for="n in 9" :key="n" />
+    <SudokuBlock v-for="n in 9" :key="n" :block-number="n" />
   </div>
 </template>
 

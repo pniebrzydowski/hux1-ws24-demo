@@ -1,10 +1,17 @@
 <script setup lang="ts">
 import NumberBlock from './NumberBlock.vue'
+
+const { blockNumber } = defineProps<{ blockNumber: number }>()
 </script>
 
 <template>
   <div class="sudoku-block">
-    <NumberBlock v-for="n in 9" :key="n" />
+    <NumberBlock
+      v-for="n in 9"
+      :key="n"
+      :sudoku-block-number="blockNumber"
+      :number-block-number="n"
+    />
   </div>
 </template>
 
