@@ -12,7 +12,9 @@ import UserInfo from '../UserInfo.vue'
       <GameInfo />
     </header>
     <main>
-      <GameBoard />
+      <Suspense>
+        <GameBoard />
+      </Suspense>
     </main>
   </div>
 </template>

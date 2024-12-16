@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 import { computed, ref } from 'vue'
 
 export const useGameStore = defineStore('game', () => {
+  const board = ref<number[][] | null>(null)
   const difficultyLevel = ref(1)
   const difficultyLabel = computed(() => {
     switch (difficultyLevel.value) {
@@ -17,6 +18,7 @@ export const useGameStore = defineStore('game', () => {
   })
 
   return {
+    board,
     difficultyLevel,
     difficultyLabel,
   }
