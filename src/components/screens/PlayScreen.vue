@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import GameBoard from '../GameBoard.vue'
+import GameInfo from '../GameInfo.vue'
+import UserInfo from '../UserInfo.vue'
 </script>
 
 <template>
   <div class="container">
     <header>
       <h1>Sudoku</h1>
+      <UserInfo />
+      <GameInfo />
     </header>
     <main>
       <GameBoard />
