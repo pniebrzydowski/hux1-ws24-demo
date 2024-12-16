@@ -1,14 +1,10 @@
 <script setup lang="ts">
 import { useUserStore } from '@/store/user'
 import SudokuBlock from './SudokuBlock.vue'
-const { gameId } = defineProps<{
-  gameId: number
-}>()
 const userStore = useUserStore()
 </script>
 
 <template>
-  <h2>Game Id: {{ gameId }}</h2>
   <p>{{ userStore.fullName }}</p>
   <div class="board">
     <SudokuBlock v-for="n in 9" :key="n" />
