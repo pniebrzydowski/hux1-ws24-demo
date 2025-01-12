@@ -16,4 +16,11 @@ const getSudokuBoardHandler: HttpHandler = http.get('https://sugoku.onrender.com
   })
 })
 
-export const handlers = [getSudokuBoardHandler]
+const postSolveHandler: HttpHandler = http.post('https://sugoku.onrender.com/validate', () => {
+  return HttpResponse.json({
+    // status: 'unsolved',
+    status: 'solved',
+  })
+})
+
+export const handlers = [getSudokuBoardHandler, postSolveHandler]
