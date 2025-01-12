@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ButtonLink from '../ButtonLink.vue'
 import StartForm from '../StartForm.vue'
 </script>
 
@@ -8,12 +9,18 @@ import StartForm from '../StartForm.vue'
   </header>
   <main>
     <StartForm />
-    <router-link to="/play">Play Game</router-link>
+    <section class="buttons">
+      <ButtonLink url="/play" label="Start Game"></ButtonLink>
+    </section>
   </main>
 </template>
 
 <style scoped>
 header {
   padding: 16px 0;
+}
+
+.buttons {
+  margin-top: 1rem;
 }
 </style>

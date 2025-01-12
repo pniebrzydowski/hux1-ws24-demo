@@ -7,7 +7,10 @@ const gameStore = useGameStore()
 const url = 'https://sugoku.onrender.com/board?difficulty=easy'
 const res = await fetch(url)
 const data = await res.json()
-gameStore.board = transformArray(data.board)
+gameStore.initialBoard = transformArray(data.board)
+gameStore.boardInput = gameStore.initialBoard.map((row) =>
+  row.map((column) => (column === 0 ? null : column)),
+)
 </script>
 
 <template>
